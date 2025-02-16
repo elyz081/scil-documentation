@@ -6,22 +6,29 @@ Dealing with heavy computing
 Using clusters
 --------------
 
-With heavy data, obviously, any programming task can be very long to execute. As an example, running the tractoflow singularity on 20 HCP subjects can easily take up to 2-3 days on an average computer. A faster way to process is to copy your data on super powerful computers and process your data directly on the distant computer. Supercomputers exist (HPC = high performance computer), which are usually not a real computer but rather a cluster of computers connected.
 
-Generally, we could say that if you have more than 20 subjects, you could start thinking to run your job on Compute Canada. Below, you can start your job locally in the evening and let it run during the night.
+.. image:: ../images/IBM_Blue_Gene_P_supercomputer.png
+   :scale: 30 %
+   :align: right
+
+With heavy data, obviously, any programming task can be very long to execute. As an example, running the tractoflow singularity on 20 HCP subjects can easily take up to 2-3 days on an average computer. A faster way to process is to copy your heavy data and process it directly on distant High Performance Computers (HPCs).
+
+
+As you can see, an HPC is not one real super computer but rather a cluster of connected computational units reffered to as "nodes". Here it's an IBM Blue Gene/P.
+
+
+`Digital Research Alliance of Canada <https://www.alliancecan.ca/en/services/advanced-research-computing>` provides a service for Advanced Research Computing.
 
 Compute Canada
 --------------
 
-`Compute Canada <https://www.computecanada.ca>`_ is an example of service for clusters. An explained in the :ref:`ref_onboarding` page, you must ask for access. Here are the links to the `login page <https://ccdb.computecanada.ca>`_ and to the `wiki page <https://docs.computecanada.ca/wiki/Compute_Canada_Documentation>`_.
+ is an example of service for clusters. An explained in the :ref:`ref_onboarding` page, you must ask for access. Here are the links to the `login page <https://ccdb.computecanada.ca>`_ and to the `wiki page <https://docs.computecanada.ca/wiki/Compute_Canada_Documentation>`_.
 
 Our lab has access to cedar, graham or beluga. The following text takes beluga as example, but it could be either one. However, our lab has more TB and RAM on beluga.
 
 Here is how the directories are separated into "spaces" and Compute Canada's definition of each space:
 
-.. image:: ../images/logo_computeCanada.png
-   :scale: 90 %
-   :align: left
+
 
 - **HOME:** While your home directory may seem like the logical place to store all your files and do all your work, in general this isn't the case - your home normally has a relatively small quota and doesn't have especially good performance for the writing and reading of large amounts of data. The most logical use of your home directory is typically source code, small parameter files and job submission scripts.
 - **PROJECT:** The project space has a significantly larger quota and is well-adapted to sharing data among members of a research group since it, unlike the home or scratch, is linked to a professor's account rather than an individual user.
